@@ -1,4 +1,4 @@
-module github.com/memochou1993/image-resizer
+module github.com/memochou1993/go-image-resizer
 
 go 1.16
 
