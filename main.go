@@ -22,7 +22,7 @@ func main() {
 	defer output.Close()
 
 	dst := image.NewRGBA(image.Rect(0, 0, src.Bounds().Max.X/2, src.Bounds().Max.Y/2))
-	draw.NearestNeighbor.Scale(dst, dst.Rect, src, src.Bounds(), draw.Over, nil)
+	draw.CatmullRom.Scale(dst, dst.Rect, src, src.Bounds(), draw.Over, nil)
 
 	if err = png.Encode(output, dst); err != nil {
 		log.Fatal(err)
